@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "sensorName": "Sensor 1",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": true,
+    "sensorValue": -26.17,
+    "timeStamp": "2017-04-23 11:12"
+  },
+  {
+    "id": 2,
+    "sensorName": "Sensor 2",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": true,
+    "sensorValue": -2.57,
+    "timeStamp": "2017-04-23 11:44"
+  },
+  {
+    "id": 3,
+    "sensorName": "Sensor 3",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -18.56,
+    "timeStamp": "2017-04-23 12:41"
+  },
+  {
+    "id": 4,
+    "sensorName": "Sensor 4",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -15.45,
+    "timeStamp": "2017-04-23 08:44"
+  },
+  {
+    "id": 5,
+    "sensorName": "Sensor 5",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 10,
+    "notificationLow": 4,
+    "notificationHigh": 8,
+    "isFavourite": true,
+    "sensorValue": 8.25,
+    "timeStamp": "2017-04-23 09:11"
+  },
+  {
+    "id": 6,
+    "sensorName": "Sensor 6",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -13.47,
+    "timeStamp": "2017-04-23 10:57"
+  },
+  {
+    "id": 7,
+    "sensorName": "Sensor 7",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -15.12,
+    "timeStamp": "2017-04-23 11:27"
+  },
+  {
+    "id": 8,
+    "sensorName": "Sensor 8",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -5.67,
+    "timeStamp": "2017-04-23 11:45"
+  },
+  {
+    "id": 9,
+    "sensorName": "Sensor 9",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -6.03,
+    "timeStamp": "2017-04-23 11:50"
+  },
+  {
+    "id": 10,
+    "sensorName": "Sensor 10",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 1"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 10,
+    "notificationLow": 4,
+    "notificationHigh": 8,
+    "isFavourite": false,
+    "sensorValue": 2.25,
+    "timeStamp": "2017-04-23 10:47"
+  },
+  {
+    "id": 11,
+    "sensorName": "Sensor 11",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -19.78,
+    "timeStamp": "2017-04-23 10:15"
+  },
+  {
+    "id": 12,
+    "sensorName": "Sensor 12",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -18.75,
+    "timeStamp": "2017-04-23 11:20"
+  },
+  {
+    "id": 13,
+    "sensorName": "Sensor 13",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -18.25,
+    "timeStamp": "2017-04-23 11:29"
+  },
+  {
+    "id": 14,
+    "sensorName": "Sensor 14",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": true,
+    "sensorValue": -13.68,
+    "timeStamp": "2017-04-23 12:27"
+  },
+  {
+    "id": 15,
+    "sensorName": "Sensor 15",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 1"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 10,
+    "notificationLow": 4,
+    "notificationHigh": 8,
+    "isFavourite": false,
+    "sensorValue": 6.49,
+    "timeStamp": "2017-04-23 11:34"
+  },
+  {
+    "id": 16,
+    "sensorName": "Sensor 16",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -20.14,
+    "timeStamp": "2017-04-23 11:47"
+  },
+  {
+    "id": 17,
+    "sensorName": "Sensor 17",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 1"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": true,
+    "sensorValue": -5.578,
+    "timeStamp": "2017-04-23 13:55"
+  },
+  {
+    "id": 18,
+    "sensorName": "Sensor 18",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -18.75,
+    "timeStamp": "2017-04-23 09:15"
+  },
+  {
+    "id": 19,
+    "sensorName": "Sensor 19",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Freezer",
+        "description": "Freezer 2"
+      }
+    ],
+    "minValue": -30,
+    "maxValue": 0,
+    "criticalLow": -26,
+    "criticalHigh": -14,
+    "notificationLow": -23,
+    "notificationHigh": -17,
+    "isFavourite": false,
+    "sensorValue": -15.25,
+    "timeStamp": "2017-04-23 10:22"
+  },
+  {
+    "id": 20,
+    "sensorName": "Sensor 20",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 1"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 10,
+    "notificationLow": 4,
+    "notificationHigh": 8,
+    "isFavourite": false,
+    "sensorValue": 1.25,
+    "timeStamp": "2017-04-23 11:48"
+  },
+  {
+    "id": 21,
+    "sensorName": "Sensor 21",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 2"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 8,
+    "notificationLow": 3,
+    "notificationHigh": 7,
+    "isFavourite": false,
+    "sensorValue": 4.53,
+    "timeStamp": "2017-04-23 08:20"
+  },
+  {
+    "id": 22,
+    "sensorName": "Sensor 22",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 2"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 8,
+    "notificationLow": 3,
+    "notificationHigh": 7,
+    "isFavourite": false,
+    "sensorValue": 2.27,
+    "timeStamp": "2017-04-23 12:52"
+  },
+  {
+    "id": 23,
+    "sensorName": "Sensor 23",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Refrigerator",
+        "description": "Fridge 2"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 10,
+    "criticalLow": 2,
+    "criticalHigh": 8,
+    "notificationLow": 3,
+    "notificationHigh": 7,
+    "isFavourite": false,
+    "sensorValue": 8.63,
+    "timeStamp": "2017-04-23 10:45"
+  },
+  {
+    "id": 24,
+    "sensorName": "Sensor 24",
+    "sensorGroup": [
+      {
+        "id": 1,
+        "type": "Oven",
+        "description": "Grill"
+      }
+    ],
+    "minValue": 0,
+    "maxValue": 300,
+    "criticalLow": 50,
+    "criticalHigh": 280,
+    "notificationLow": 90,
+    "notificationHigh": 260,
+    "isFavourite": false,
+    "sensorValue": 125.50,
+    "timeStamp": "2017-04-23 11:23"
+  }
+]

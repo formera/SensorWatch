@@ -1,0 +1,39 @@
+    {
+        "sensorgroups": [
+            {
+                "id": 1,
+                "type": "Freezer",
+                "description": "Freezer 1"
+            },
+            {
+                "id": 2,
+                "type": "Freezer",
+                "description": "Freezer 2"
+            },
+            {
+                "id": 3,
+                "type": "Freezer",
+                "description": "Freezer 3"
+            },
+            {
+                "id": 4,
+                "type": "Refrigerator",
+                "description": "Fridge 1"
+            },
+            {
+                "id": 5,
+                "type": "Refrigerator",
+                "description": "Fridge 2"
+            },
+            {
+                "id": 6,
+                "type": "Refrigerator",
+                "description": "Fridge 3"
+            },
+            {
+                "id": 7,
+                "type": "Owen",
+                "description": "Grill"
+            }                                       
+        ]
+    }

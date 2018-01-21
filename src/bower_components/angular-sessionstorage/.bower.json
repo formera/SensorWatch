@@ -1,0 +1,39 @@
+{
+  "name": "angular-sessionstorage",
+  "version": "1.1.5",
+  "description": "Provide read/write access to browsers' sessionStorage.",
+  "authors": [
+    "Jan Oetjen <oetjenj@gmail.com>"
+  ],
+  "license": "MIT",
+  "main": "angular-sessionstorage.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "angular",
+    "storage",
+    "sessionstorage",
+    "webstorage",
+    "browser",
+    "client-side"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  },
+  "homepage": "https://github.com/joetjen/angular-sessionstorage",
+  "_release": "1.1.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.5",
+    "commit": "117baa62481bf9ee0c99bfad6de0ed8cb0dbc53e"
+  },
+  "_source": "https://github.com/joetjen/angular-sessionstorage.git",
+  "_target": "^1.1.5",
+  "_originalSource": "angular-sessionstorage",
+  "_direct": true
+}

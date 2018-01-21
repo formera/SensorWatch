@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "dateTime": "2017-04-16 15:46",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Notification",
+    "sensorValue": "-18"
+  },
+  {
+    "id": 2,
+    "dateTime": "2017-04-15 15:28",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Critical",
+    "sensorValue": "-15"
+  },
+  {
+    "id": 3,
+    "dateTime": "2017-04-15 14:41",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Critical",
+    "sensorValue": "-14"
+  },
+  {
+    "id": 4,
+    "dateTime": "2017-04-15 11:17",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Critical",
+    "sensorValue": "-13"
+  },
+  {
+    "id": 5,
+    "dateTime": "2017-04-15 12:46",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Critical",
+    "sensorValue": "-15"
+  },
+  {
+    "id": 6,
+    "dateTime": "2017-04-15 11:26",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Critical",
+    "sensorValue": "-16"
+  },
+  {
+    "id": 7,
+    "dateTime": "2017-04-15 11:15",
+    "sensorGroup": "Freezer 1",
+    "sensorName": "Sensor 1",
+    "severityStatus": "Notication",
+    "sensorValue": "-18"
+  },
+  {
+    "id": 8,
+    "dateTime": "2017-04-15 10:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 9,
+    "dateTime": "2017-04-15 10:26",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 10,
+    "dateTime": "2017-04-15 10:16",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 11,
+    "dateTime": "2017-04-15 09:16",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 12,
+    "dateTime": "2017-04-14 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 235",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 13,
+    "dateTime": "2017-04-13 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 14,
+    "dateTime": "2017-04-12 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 15,
+    "dateTime": "2017-04-11 15:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 16,
+    "dateTime": "2017-04-10 15:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 17,
+    "dateTime": "2017-04-09 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 18,
+    "dateTime": "2017-04-08 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 19,
+    "dateTime": "2017-04-07 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 20,
+    "dateTime": "2017-04-06 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Critical",
+    "sensorValue": "9"
+  },
+  {
+    "id": 21,
+    "dateTime": "2017-04-05 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Critical",
+    "sensorValue": "9"
+  },
+  {
+    "id": 22,
+    "dateTime": "2017-04-04 15:46",
+    "sensorGroup": "Fridge 2",
+    "sensorName": "Sensor 23",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 23,
+    "dateTime": "2017-04-03 15:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 3",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 24,
+    "dateTime": "2017-04-02 15:46",
+    "sensorGroup": "Fridge 1",
+    "sensorName": "Sensor 15",
+    "severityStatus": "Critical",
+    "sensorValue": "9"
+  },
+  {
+    "id": 25,
+    "dateTime": "2017-04-01 15:46",
+    "sensorGroup": "Fridge 1",
+    "sensorName": "Sensor 15",
+    "severityStatus": "Critical",
+    "sensorValue": "9"
+  },
+  {
+    "id": 26,
+    "dateTime": "2017-03-16 15:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 4",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 27,
+    "dateTime": "2017-02-16 15:46",
+    "sensorGroup": "Freezer 2",
+    "sensorName": "Sensor 4",
+    "severityStatus": "Not responding",
+    "sensorValue": "NaN"
+  },
+  {
+    "id": 28,
+    "dateTime": "2017-01-16 15:46",
+    "sensorGroup": "Fridge 1",
+    "sensorName": "Sensor 15",
+    "severityStatus": "Notification",
+    "sensorValue": "8"
+  },
+  {
+    "id": 29,
+    "dateTime": "2017-01-15 15:46",
+    "sensorGroup": "Fridge 1",
+    "sensorName": "Sensor 15",
+    "severityStatus": "Critical",
+    "sensorValue": "9"
+  },
+  {
+    "id": 30,
+    "dateTime": "2017-01-14 15:46",
+    "sensorGroup": "Fridge 1",
+    "sensorName": "Sensor 15",
+    "severityStatus": "Critical",
+    "sensorValue": "10"
+  }
+]

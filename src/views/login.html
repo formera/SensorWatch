@@ -1,0 +1,44 @@
+<div class="jumbotron login">
+    <div class="container">
+        
+        <div id="row">
+            <div class="col-lg-8 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-4 col-xs-offset-4">
+                
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash"
+                    ng-bind="flash.message"></div>
+                <h2>Login</h2>
+                <form name="form" ng-submit="login()" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
+                        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+                        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                    </div>
+                    <!--<div class="checkbox">
+                        <label>
+                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                    </label>
+                    </div>-->
+                    <br>
+                    <div class="form-actions">
+                        <!--<a ui-sref="dashboard" ng-disabled="form.$invalid || dataLoading" class="btn btn-lg btn-primary btn-block">Login</a>-->
+                        <button type="submit" class="btn btn-primary btn-block" ng-click="userLogin()">Login</button>
+                        <img ng-if="faultedLogin" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+                        />
+                    </div>
+                </form>
+
+                <div class="jumbotron" ng-if="apidata.faultedLogin">
+                    <h1>Error message</h1> 
+                    <p>The provided username or/and password is incorrect! Please try again...</p> 
+                </div>                
+                <div class="row box-buffer">
+                </div>             
+            </div>
+        </div>
+    </div>
+</div>

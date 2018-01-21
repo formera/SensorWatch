@@ -1,0 +1,386 @@
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{title}}</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Handle client: {{client.name}}
+                    </div>
+                    <div class="panel-body">
+                        <div ng-show="clientsCount == 1">
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label>Client name</label>
+                                    <input class="form-control" ng-model="selectedClient.name">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input class="form-control" ng-model="selectedClient.description">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <button type="submit" class="btn btn-primary" ng-click="saveClient()" ng-disabled="isDisabled">Save</button>
+                                <button type="submit" class="btn btn-primary" ng-click="cancelSaveClient()">Cancel</button>
+                            </div>
+                        </div>
+                        <div ng-hide="clientsCount == 1">
+                            <table width="100%" class="col-lg-6 col-md-6 col-xs-6">
+                                <thead>
+                                    <tr>
+                                        <th><strong href="#">Name</strong></th>
+                                        <th><strong href="#">Description</strong></th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="client in clients">
+                                        <td>{{client.name}}</td>
+                                        <td>{{client.description}}</td>
+                                        <td><button class="btn btn-primary" ng-click="editClient(client)"> Edit</button></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label>Client name</label>
+                                    <input class="form-control" ng-model="selectedClient.name">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input class="form-control" ng-model="selectedClient.description">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <button type="submit" class="btn btn-primary" ng-click="saveClient()" ng-disabled="isDisabled">Save</button>
+                                <button type="submit" class="btn btn-primary" ng-click="cancelSaveClient()">Cancel</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer text-center panel-relative">
+                        <p class="text-center"> Client administration</p>
+                    </div>
+                </div>
+                <!-- /.panel-panel -->
+            </div>
+        <!--</div>
+
+        <div class="row">-->
+            <div class="col-lg-4 col-md-4 col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Mixed settings
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <div class="form-group">
+                                <label>Group sensors by device hubs</label>
+                                <select class="form-control" ng-model="selectedOption" ng-options="opt.value for opt in showDeviceHubsOptions track by opt.id"
+                                    ng-change="setDeviceHubs(showDeviceHubsOptions)"></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <div class="form-group">
+                                <label>Aggregate dashboard chart in minutes</label>
+                                <input class="form-control" ng-model="aggrDashboardChart" ng-change="setAggrDashboardChart()">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+
+            </div>
+            <!-- /.col-lg-4 col-md-4 col-xs-6 -->
+        </div>
+        <!-- /row -->
+
+        <!--<div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        View
+                        <select ng-model="itemsPerPage" ng-options="x for x in options"></select> records at a time.
+                    </div>
+                    <div class="panel-heading">
+                        My sensors
+                    </div>
+                    <div class="panel-body">
+                        <table width="100%" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th><strong href="#" ng-click="sortData('id')">ID</strong></th>
+                                    <th><strong href="#" ng-click="sortData('sensorName')">Sensor</strong></th>
+                                    <th><strong href="#" ng-click="sortData('sensorGroup')">Group</strong></th>
+                                    <th><strong href="#" ng-click="sortData('minValue')">Min</strong></th>
+                                    <th><strong href="#" ng-click="sortData('maxValue')">Max</strong></th>
+                                    <th><strong href="#" ng-click="sortData('criticalLow')">C-Low</strong></th>
+                                    <th><strong href="#" ng-click="sortData('criticalHigh')">C-High</strong></th>
+                                    <th><strong href="#" ng-click="sortData('notificationLow')">N-Low</strong></th>
+                                    <th><strong href="#" ng-click="sortData('notificationHigh')">N-High</strong></th>
+                                    <th><strong href="#" ng-click="sortData('timeStamp')">TimeStamp</strong></th>
+                                    <th><strong href="#" ng-click="sortData('isFavourite')">Favourite</strong></th>
+                                    <th><strong href="#" ng-click="sortData('sensorValue')">Value</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="sensor in pagedData" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index, sensor)">
+                                    <td>{{sensor.id}}</td>
+                                    <td>{{sensor.sensorName}}</td>
+                                    <td>{{sensor.sensorGroup[0].description}}</td>
+                                    <td>{{sensor.minValue}}</td>
+                                    <td>{{sensor.maxValue}}</td>
+                                    <td>{{sensor.criticalLow}}</td>
+                                    <td>{{sensor.criticalHigh}}</td>
+                                    <td>{{sensor.notificationLow}}</td>
+                                    <td>{{sensor.notificationHigh}}</td>
+                                    <td>{{sensor.timeStamp}}</td>
+                                    <td>{{sensor.isFavourite}}</td>
+                                    <td>{{sensor.sensorValue}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Selected sensor
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <form role="form">
+
+                                <div class="col-lg-2 col-md-2 col-xs-4">
+                                    <div class="form-group">
+                                        <label>ID</label>
+                                        <input class="form-control" ng-model="selectedID" id="disabledInput" type="text" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-xs-8">
+                                    <div class="form-group">
+                                        <label>Sensor</label>
+                                        <input class="form-control" ng-model="selectedSensor">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label>Groups</label>
+                                        <select class="form-control" ng-model="dropselectedItem.id" ng-options="item.description for item in items track by item.id"></select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>Min</label>
+                                        <input class="form-control" ng-model="selectedLow">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>C-Low</label>
+                                        <input class="form-control" ng-model="selectedCriticalLow">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>N-Low</label>
+                                        <input class="form-control" ng-model="selectedNotificationLow">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>Max</label>
+                                        <input class="form-control" ng-model="selectedHigh">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>C-High</label>
+                                        <input class="form-control" ng-model="selectedCriticalHigh">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-xs-6">
+                                    <div class="form-group">
+                                        <label>N-High</label>
+                                        <input class="form-control" ng-model="selectedNotificationHigh">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-4 col-xs-4">
+                                    <button type="submit" class="btn btn-primary" ng-click="saveSensor()">Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-click="cancelSaveSensor()">Cancel</button>
+                                </div>
+
+                                <div class="col-lg-6 col-md-8 col-xs-8">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" ng-model="selectedIsFavourite">Favourite - Show on dashboard
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-2">
+                <div justgage title="{{selectedSensor}}" title-font-color="{{titleFontColor}}" value="{{value}}" value-font-color="{{valueFontColor}}"
+                    width="{{width}}" height="{{height}}" relative-gauge-size="{{relativeGaugeSize}}" value-min-font-size="{{valueMinFontSize}}"
+                    title-min-font-size="{{titleMinFontSize}}" label-min-font-size="{{labelMinFontSize}}" min-label-min-font-size="{{minLabelMinFontSize}}"
+                    maxLabelMinFontSize="{{maxLabelMinFontSize}}" min="{{min}}" max="{{max}}" hide-min-max="{{hideMinMax}}" hide-value="{{hideValue}}"
+                    hide-inner-shadow="{{hideInnerShadow}}" gauge-width-scale="{{gaugeWidthScale}}" gauge-color="{{gaugeColor}}"
+                    show-inner-shadow="{{showInnerShadow}}" shadow-opacity="{{shadowOpacity}}" shadow-size="{{shadowSize}}" shadow-vertical-offset="{{shadowVerticalOffset}}"
+                    level-colors="{{levelColors}}" custom-sectors="{{customSectors}}" no-gradient="{{noGradient}}" label={{selectedGroup[0].description}}
+                    label-font-color="{{labelFontColor}}" start-animation-time="{{startAnimationTime}}" start-animation-type="{{startAnimationType}}"
+                    refresh-animation-time="{{refreshAnimationTime}}" refresh-animation-type="{{refreshAnimationType}}" donut="{{donut}}"
+                    donut-start-angle="{{donutStartAngle}}" counter="{{counter}}" decimals="{{decimals}}" symbol="{{symbol}}"
+                    format-number="{{formatNumber}}" human-friendly="{{humanFriendly}}" human-friendly-decimal="{{humanFriendlyDecimal}}"
+                    text-renderer="textRenderer">
+                </div>
+
+                <p class="text-center">Timestamp: {{selectedtimeStamp}}</p>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Handle groups
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <div class="form-group">
+                                <label>Groups</label>
+                                <select class="form-control" ng-model="dropselectedItem" ng-options="item.description for item in items track by item.id"></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <label>ID</label>
+                                <input class="form-control" ng-model="dropselectedItem.id" id="disabledInput" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-8">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input class="form-control" ng-model="dropselectedItem.description">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <button type="submit" class="btn btn-primary" ng-click="removeGroup()">Remove</button>
+                            <button type="submit" class="btn btn-primary" ng-click="editGroup()">Edit</button>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Add new group</label>
+                                <input class="form-control" ng-model="newGroupItem.description">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Select group type</label>
+                                <select class="form-control" ng-model="newGroupItem.type">
+                                    <option>Refrigerator</option>
+                                    <option>Freezer</option>
+                                    <option>Oven</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-lg-8">
+                            <button type="submit" class="btn btn-primary" ng-click="addGroup(newGroupItem)">Add</button>
+                            <button type="submit" class="btn btn-primary" ng-click="cancelGroup()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Company information
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <form role="form">
+                                <div class="col-lg-6 col-md-6 col-xs-6">
+
+                                    <div class="form-group">
+                                        <label>Company</label>
+                                        <input class="form-control" ng-model="customer.company">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input class="form-control" ng-model="customer.address1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address 2</label>
+                                        <input class="form-control" ng-model="customer.address2">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Zip Code</label>
+                                        <input class="form-control" ng-model="customer.zip">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-xs-6">
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <input class="form-control" ng-model="customer.city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input class="form-control" ng-model="customer.phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <input class="form-control" ng-model="customer.country_name">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" ng-click="saveCustomer()">Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-click="cancelSaveCustomer()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

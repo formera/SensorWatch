@@ -1,0 +1,220 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{title}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-xs-4">
+            <div class="form-group">
+                <label>Interval from:</label>
+                <input class="form-control" ng-model="loadChartFrom">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-xs-4">
+            <div class="form-group">
+                <label>Interval to:</label>
+                <input class="form-control" ng-model="loadChartTo">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-xs-4">
+            <div class="form-group">
+                <label>Group Range To:</label>
+                <input class="form-control" ng-model="aggregateTo">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-xs-4">
+            <div class="form-group">
+                <label>Group Bar To:</label>
+                <input class="form-control" ng-model="aggregateBarTo">
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <!-- /.col-lg-12 -->
+        <div class="col-lg-6 col-md-12 col-xs-12" data-ng-repeat="hub in sensorhubs">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Device Hub: {{hub.name}}
+                </div>
+                <div class="panel-body">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <th><strong href="#">Name</strong></th>
+                                <th><strong href="#">Type</strong></th>
+                                <th><strong href="#">Value</strong></th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="sensor in hub.topics">
+                                <td>{{sensor.name}}</td>
+                                <td>{{sensor.type}}</td>
+                                <td>{{sensor.value}}</td>
+                                <td><button class="btn btn-primary" ng-click="loadChart($index, sensor)">LoadChart</button></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer text-center panel-relative">
+                    <p class="text-center"> Name: {{ hub.name }} , Last seen: {{ hub.lastSeen | date : "MMM d, y HH:mm:ss" }}</p>
+                </div>
+            </div>
+            <!-- /.panel-panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> Selected SensorChart - {{selectedItem.name}}
+                </div>
+                <!-- /.panel-heading -->
+                <div class="chart-container">
+                    <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart>
+                </div>
+
+                <div class="chart-container">
+                    <hc-chart options="chartAggrOptions">Placeholder for generic chart</hc-chart>
+                </div>
+
+                <div class="chart-container">
+                    <hc-chart options="chartBarOptions">Placeholder for generic chart</hc-chart>
+                </div>
+
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+
+
+    <!--<div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    View
+                    <select ng-model="itemsPerPage" ng-options="x for x in options"></select> records at a time.
+                </div>
+                <div class="panel-heading">
+                    My sensors
+                </div>
+                <div class="panel-body">
+                    <table width="100%" id="myTable">
+                        <thead>
+                            <tr>
+                                <th><strong href="#" ng-click="sortData('id')">ID</strong></th>
+                                <th><strong href="#" ng-click="sortData('sensorName')">Sensor</strong></th>
+                                <th><strong href="#" ng-click="sortData('sensorGroup[0].description')">GroupName</strong></th>
+                                <th><strong href="#" ng-click="sortData('sensorGroupType')">GroupType</strong></th>
+                                <th><strong href="#" ng-click="sortData('timeStamp')">TimeStamp</strong></th>
+                                <th><strong href="#" ng-click="sortData('sensorValue')">Value</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="sensor in pagedData" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index, sensor)">
+                                <td>{{sensor.id}}</td>
+                                <td>{{sensor.sensorName}}</td>
+                                <td>{{sensor.sensorGroup[0].description}}</td>
+                                <td>{{sensor.sensorGroup[0].type}}</td>
+                                <td>{{sensor.timeStamp}}</td>
+                                <td>{{sensor.sensorValue}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pagination>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
+
+    <!--<div class="row">
+
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Last 24 hours
+                </div>
+
+                <div class="panel-body">
+                    <nvd3 options="options24h" data="data24h"></nvd3>
+                </div>
+            </div>
+    
+        </div>-->
+
+        <!--<div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Last 10 days - Min, avarage and max
+                </div>
+           
+                <div class="panel-body">
+                    <nvd3 options="optionsMulti" data="dataMulti"></nvd3>
+                </div>
+          
+            </div>
+   
+        </div>
+
+    </div>-->
+
+
+
+    <!--<div class="row">
+
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Compare by type - Freezer
+                </div>
+
+                <div class="panel-body">
+                    <div line-chart="" line-data="linechart_data1" line-xkey={{linechart_xkey1}} line-ykeys="linechart_ykey1" line-labels="linechart_labels1"
+                        line-colors="linechart_colors1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Compare by type - Refrigerator
+                </div>
+                <div class="panel-body">
+                    <div line-chart="" line-data="linechart_data2" line-xkey={{linechart_xkey2}} line-ykeys="linechart_ykey2" line-labels="linechart_labels2"
+                        line-colors="linechart_colors2"></div>
+                </div>
+            </div>
+        </div>-->
+
+        <!--<div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Compare by type - Oven
+                </div>
+                <div class="panel-body">
+                    <div line-chart="" line-data="linechart_data3" line-xkey={{linechart_xkey3}} line-ykeys="linechart_ykey3" line-labels="linechart_labels3"
+                        line-colors="linechart_colors3"></div>
+                </div>
+
+            </div>
+        </div>-->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /#page-wrapper -->

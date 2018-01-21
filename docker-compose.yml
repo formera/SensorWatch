@@ -1,0 +1,13 @@
+nginx:
+    build: ./src
+    container_name: nginx
+    ports:
+      - "88:80"
+json-server:
+  image: vimagick/json-server
+  command: -w db.json
+  ports:
+    - "3000:3000"
+  volumes:
+    - ./frontend/data/db.json:/app/db.json
+  restart: always

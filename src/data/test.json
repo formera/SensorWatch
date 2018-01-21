@@ -1,0 +1,98 @@
+[
+    {
+        "id": "592c65cddc1f504e74e4d047",
+        "name": "New client",
+        "description": "Test",
+        "logo": null,
+        "groupings": []
+    },
+    {
+        "id": "592b2b368b50ed4f6bf5b740",
+        "name": "Linnegatans Ostgrossist",
+        "description": null,
+        "logo": null,
+        "groupings": [
+            {
+                "name": "Ankomstrum",
+                "topics": [
+                    {
+                        "deviceId": "592b2dab0b3c7a50e833dabb",
+                        "topic": "sensor0/temp"
+                    },
+                    {
+                        "deviceId": "592b2dab0b3c7a50e833dabb",
+                        "topic": "sensor0/hum"
+                    }
+                ]
+            },
+            {
+                "name": "Lager",
+                "topics": [
+                    {
+                        "deviceId": "592b2dab0b3c7a50e833dabb",
+                        "topic": "sensor1/temp"
+                    },
+                    {
+                        "deviceId": "592b2dab0b3c7a50e833dabb",
+                        "topic": "sensor1/hum"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "59147ea1e56e674c945191d8",
+        "name": "ICA Test",
+        "description": "A test client",
+        "logo": null,
+        "groupings": [
+            {
+                "name": "Group1",
+                "topics": [
+                    {
+                        "deviceId": "591480b215cec24f34290965",
+                        "topic": "sensor0/temp"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "592c5ac4dc1f504e74e4d046",
+        "name": "Testkunden",
+        "description": null,
+        "logo": null,
+        "groupings": [
+            {
+                "name": "Laundry",
+                "topics": [
+                    {
+                        "deviceId": "593564ce361f812794360b34",
+                        "topic": "sensor0/temp"
+                    },
+                    {
+                        "deviceId": "593564ce361f812794360b34",
+                        "topic": "sensor0/hum"
+                    }
+                ]
+            },
+            {
+                "name": "Båthuset",
+                "topics": [
+                    {
+                        "deviceId": "59295c850b3c7a50e833daba",
+                        "topic": "sensor0/temp"
+                    },
+                    {
+                        "deviceId": "59295c850b3c7a50e833daba",
+                        "topic": "sensor1/temp"
+                    },
+                    {
+                        "deviceId": "59295c850b3c7a50e833daba",
+                        "topic": "sensor1/hum"
+                    }
+                ]
+            }
+        ]
+    }
+]

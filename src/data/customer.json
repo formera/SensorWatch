@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "company": "Testbolaget AB",
+    "address1": "Testgatan 1",
+    "address2": "Adress 2",
+    "city": "Göteborg",
+    "country": "Sverige",
+    "phone": "031-123 123",
+    "zip": "40202",
+    "country_code": "SE",
+    "country_name": "Sverige"
+  }
+]
